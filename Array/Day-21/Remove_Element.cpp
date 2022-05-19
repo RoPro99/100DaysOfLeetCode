@@ -15,7 +15,7 @@ int main() {
 	int cnt = 0;
 	for (int i = 0; i < n; i++) {
 		if (arr[i] != val) {
-			arr[cnt++] = arr[i];
+			cnt++;
 		}
 	}
 	cout << cnt << endl;

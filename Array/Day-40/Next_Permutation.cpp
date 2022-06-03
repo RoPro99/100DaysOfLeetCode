@@ -10,6 +10,7 @@ void nextpermutation(int arr[], int n) {
 	}
 	if (k < 0) {
 		reverse(arr.begin(), arr.end());
+
 	}
 	else {
 		for (int l = n - 1; l > k; l--) {

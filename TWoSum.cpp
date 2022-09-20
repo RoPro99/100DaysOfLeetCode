@@ -2,20 +2,22 @@
 #include<iostream>
 using namespace std;
 int main() {
+	int arr[1000];
 	int n;
 	cin >> n;
-	int arr[1000];
 	for (int i = 0; i < n; i++) {
+
 		cin >> arr[i];
 	}
-	int copy[1000];
+	int target;
+	cin >> target;
 	for (int i = 0; i < n; i++) {
-		copy[i] = arr[i];
+		for (int j = i + 1; j < n - 1; j--) {
+			if (arr[i] + arr[j] == target) {
+				cout << i << "," << j << endl;
+			}
+		}
 	}
-	for (int i = 0; i < n; i++) {
-		cout << arr[i] << "," << copy[i] << ",";
-	}
-
 
 	return 0;
 }

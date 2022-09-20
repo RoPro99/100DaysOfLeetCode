@@ -1,17 +1,35 @@
-#include<bits/stdc++.h>
-#include<iostream>
-using namespace std;
-int main() {
-	int n;
-	cin >> n;
-	int arr[1000];
-	for (int i = 0; i < n; i++) {
-		cin >> arr[i];
+#include <stdio.h>
+#include <stdlib.h>
+int non_repeating_elements(int arr[], int n)
+{
+	int i, j;
+	int count = 1;
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < n; j++)
+		{
+			if (arr[i] == arr[j] && i != j)
+				break;
+		}
+		if (j == n )
+		{
+			printf("\nNon-repeating element [%d] : %d \n", count, arr[i]);
+			++count;
+		}
 	}
-	int res = 0;
-	for (int i = 0; i < n; i++) {
-		res ^= arr[i];
+	return -1;
+}
+int main()
+{
+	int n, i;
+	printf("\nEnter the number of elements : ");
+	scanf("%d", &n);
+	int arr[n];
+	printf("\nInput the array elements : ");
+	for (i = 0; i < n; i++)
+	{
+		scanf("%d", &arr[i]);
 	}
-	cout << res << endl;
+	non_repeating_elements(arr, n);
 	return 0;
 }

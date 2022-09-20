@@ -4,18 +4,17 @@ using namespace std;
 int main() {
 	int n;
 	cin >> n;
-	int arr[1000];
-	for (int i = 0; i < n; i++) {
+	int arr[100];
+	for (int i = 0; i <= n; ++i)
+	{
 		cin >> arr[i];
 	}
-	int copy[1000];
+	int cnt = 0;
 	for (int i = 0; i < n; i++) {
-		copy[i] = arr[i];
+		arr[i] = arr[i] / 10;
+		cnt++;
+		cout << cnt << endl;
 	}
-	for (int i = 0; i < n; i++) {
-		cout << arr[i] << "," << copy[i] << ",";
-	}
-
 
 	return 0;
 }

@@ -8,8 +8,8 @@ int Findgcd( int small, int large) {
 	if (large == 0) {
 		return small;
 	}
-	while (small != large) {
-		if (small > large) {
+	while (small != large) {    s=11 l=19
+		if (small > large) {   
 			small = small - large;
 		}
 		if (large > small) {

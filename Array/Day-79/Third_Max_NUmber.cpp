@@ -18,18 +18,18 @@ for(int i=0;i<n;i++){
 }
 cout<<first<<endl;
 //Finding the second largest element
-int second=arr[0];
+int second=INT_MIN;
 for(int i=0;i<n;i++){
-	if(arr[i]>second && first>arr[i]){
+	if(arr[i]>second && arr[i]<first){
 		second = arr[i];
 	}
 }
 cout<<second<<endl;
 
 //finding the largest element 
-int third=arr[0];
+int third=INT_MIN;
 for(int i=0;i<n;i++){
-	if(arr[i]>third && second>arr[i]){
+	if(arr[i]>third && arr[i]<second){
 		third=arr[i];
 	}
 }

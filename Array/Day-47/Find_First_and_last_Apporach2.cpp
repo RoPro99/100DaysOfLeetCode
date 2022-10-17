@@ -1,10 +1,10 @@
 #include<bits/stdc++.h>
 #include<iostream>
 using namespace std;
-int fistlast(int *arr, int n, int target) {
+void fistlast(int *arr, int n, int target) {
 	int i = 0;
 	int j = n - 1;
-	vector<int>ans = { -1, -1};
+	int ans[] = { -1, -1};
 	while (i < n) {
 		if (arr[i] == target) {
 			ans[0] = i;
@@ -19,7 +19,10 @@ int fistlast(int *arr, int n, int target) {
 		}
 		j--;
 	}
-	return ans;
+	for(int i=0;i<2;i++){
+		cout<<ans[i]<<",";
+		
+	}
 
 }
 int main() {
@@ -31,7 +34,7 @@ int main() {
 	}
 	int target;
 	cin >> target;
-	cout << fistlast(arr, n, target) << ",";
+	fistlast(arr, n, target);
 
 
 	return 0;

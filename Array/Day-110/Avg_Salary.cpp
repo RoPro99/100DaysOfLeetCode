@@ -21,9 +21,12 @@ void avgsalary(int *arr,int n){
 		
 	}
 	double avg=0;
-		for(int i=0;i<ans.size()-1;i++){
+	double sm=0;
+		for(int i=0;i<ans.size();i++){
+		sm += ans[i];
+		avg=sm/(n-2);	
+		 
 		
-		avg=(ans[i]+ans[i+1])/(n-2);
 	}
 	// int s=ans.size();
 	// cout<<s<<endl;
